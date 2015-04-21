@@ -1,0 +1,29 @@
+###
+# expected log:
+# ...[INFO,TrackingController] Email number #1 has been sent
+###
+curl -v --header "Accept: application/json" -X GET http://localhost:9090/spring-email-tracking/sendEmail
+
+###
+# expected log:
+# ...[INFO,TrackingController] Email number #2 has been sent
+###
+curl -v --header "Accept: application/json" -X GET http://localhost:9090/spring-email-tracking/sendEmail
+
+###
+# expected log:
+# ...[INFO,TrackingController] Email number #2 has been opened already 2 times
+###
+curl -v --header "Accept: image/gif" -X GET http://localhost:9090/spring-email-tracking/trackEmail/2
+
+###
+# expected log:
+# ...[INFO,TrackingController] Email number #1 has been opened already 1 times
+###
+curl -v --header "Accept: image/gif" -X GET http://localhost:9090/spring-email-tracking/trackEmail/1
+
+###
+# expected log:
+# ...[INFO,TrackingController] Email number #1 has been opened already 2 times
+###
+curl -v --header "Accept: image/gif" -X GET http://localhost:9090/spring-email-tracking/trackEmail/1
