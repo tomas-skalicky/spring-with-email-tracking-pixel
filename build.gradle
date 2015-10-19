@@ -33,7 +33,7 @@ targetCompatibility = 1.8
 version = '0.0.1-SNAPSHOT'
 
 ext {
-	springVersion = '4.1.6.RELEASE'
+	springVersion = '4.2.2.RELEASE'
 	jacksonVersion = '2.5.2'
 }
 
