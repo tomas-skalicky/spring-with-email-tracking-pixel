@@ -52,10 +52,6 @@ dependencies {
 	compile "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}"
 	compile "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
 
-	// TestNG
-	testCompile 'org.testng:testng:6.8.21'
-	testCompile 'org.hamcrest:hamcrest-all:1.3'
-
 	// Injection
 	compile 'javax.inject:javax.inject:1'
 	
